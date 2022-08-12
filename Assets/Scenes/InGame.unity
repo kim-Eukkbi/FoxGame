@@ -123,6 +123,987 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &341234355
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 341234356}
+  - component: {fileID: 341234357}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &341234356
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 341234355}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &341234357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 341234355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 548b53f71fd55c243a31b043dd6ca92c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sliceType: 4
+  sliceLayer:
+    layer: 0
+    layers: 0000000000000000
+  visuals:
+    lineEndingType: 0
+    lineEndingEdgeCount: 6
+    drawSlicer: 1
+    visualScale: 0.5
+    lineWidth: 1
+    lineEndWidth: 0.5
+    zPosition: 0
+    slicerColor: {r: 1, g: 0.08363296, b: 0, a: 1}
+    lineBorder: 0
+    lineEndSize: 0.05
+    vertexSpace: 0.25
+    borderScale: 2
+    minVertexDistance: 1
+    customMaterial: 0
+    customFillMaterial: {fileID: 0}
+    customBoarderMaterial: {fileID: 0}
+    sortingLayer:
+      Name: 
+      Order: 0
+    customEndingsImage: 0
+    customEndingImageMaterial: {fileID: 0}
+  input:
+    multiTouch: 1
+  linearControllerObject:
+    input:
+      multiTouch: 1
+    visuals:
+      lineEndingType: 0
+      lineEndingEdgeCount: 6
+      drawSlicer: 1
+      visualScale: 0.5
+      lineWidth: 1
+      lineEndWidth: 0.5
+      zPosition: 0
+      slicerColor: {r: 1, g: 0.08363296, b: 0, a: 1}
+      lineBorder: 0
+      lineEndSize: 0.05
+      vertexSpace: 0.25
+      borderScale: 2
+      minVertexDistance: 1
+      customMaterial: 0
+      customFillMaterial: {fileID: 0}
+      customBoarderMaterial: {fileID: 0}
+      sortingLayer:
+        Name: 
+        Order: 0
+      customEndingsImage: 0
+      customEndingImageMaterial: {fileID: 0}
+    sliceLayer:
+      layer: 0
+      layers: 0000000000000000
+    startedSlice: 0
+    endSliceIfPossible: 0
+    startSliceIfPossible: 0
+    strippedLinear: 0
+    minVertexDistance: 1
+    displayCollisions: 0
+    sliceJoints: 0
+    autocomplete: 0
+    autocompleteDisplay: 0
+    autocompleteDistance: 1
+    addForce: 1
+    addForceAmount: 5
+  linearCutControlelrObject:
+    input:
+      multiTouch: 1
+    visuals:
+      lineEndingType: 0
+      lineEndingEdgeCount: 6
+      drawSlicer: 1
+      visualScale: 0.5
+      lineWidth: 1
+      lineEndWidth: 0.5
+      zPosition: 0
+      slicerColor: {r: 1, g: 0.08363296, b: 0, a: 1}
+      lineBorder: 0
+      lineEndSize: 0.05
+      vertexSpace: 0.25
+      borderScale: 2
+      minVertexDistance: 1
+      customMaterial: 0
+      customFillMaterial: {fileID: 0}
+      customBoarderMaterial: {fileID: 0}
+      sortingLayer:
+        Name: 
+        Order: 0
+      customEndingsImage: 0
+      customEndingImageMaterial: {fileID: 0}
+    sliceLayer:
+      layer: 0
+      layers: 0000000000000000
+    cutSize: 0.5
+  linearTrackedControlelrObject:
+    input:
+      multiTouch: 1
+    visuals:
+      lineEndingType: 0
+      lineEndingEdgeCount: 6
+      drawSlicer: 1
+      visualScale: 0.5
+      lineWidth: 1
+      lineEndWidth: 0.5
+      zPosition: 0
+      slicerColor: {r: 1, g: 0.08363296, b: 0, a: 1}
+      lineBorder: 0
+      lineEndSize: 0.05
+      vertexSpace: 0.25
+      borderScale: 2
+      minVertexDistance: 1
+      customMaterial: 0
+      customFillMaterial: {fileID: 0}
+      customBoarderMaterial: {fileID: 0}
+      sortingLayer:
+        Name: 
+        Order: 0
+      customEndingsImage: 0
+      customEndingImageMaterial: {fileID: 0}
+    sliceLayer:
+      layer: 0
+      layers: 0000000000000000
+  linearTrailControllerObject:
+    input:
+      multiTouch: 1
+    visuals:
+      lineEndingType: 0
+      lineEndingEdgeCount: 6
+      drawSlicer: 1
+      visualScale: 0.5
+      lineWidth: 1
+      lineEndWidth: 0.5
+      zPosition: 0
+      slicerColor: {r: 1, g: 0.08363296, b: 0, a: 1}
+      lineBorder: 0
+      lineEndSize: 0.05
+      vertexSpace: 0.25
+      borderScale: 2
+      minVertexDistance: 1
+      customMaterial: 0
+      customFillMaterial: {fileID: 0}
+      customBoarderMaterial: {fileID: 0}
+      sortingLayer:
+        Name: 
+        Order: 0
+      customEndingsImage: 0
+      customEndingImageMaterial: {fileID: 0}
+    sliceLayer:
+      layer: 0
+      layers: 0000000000000000
+    trailRenderer:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    trailRendererCount: 1
+    addForce: 1
+    addForceAmount: 5
+  complexControllerObject:
+    input:
+      multiTouch: 1
+    visuals:
+      lineEndingType: 0
+      lineEndingEdgeCount: 6
+      drawSlicer: 1
+      visualScale: 0.5
+      lineWidth: 1
+      lineEndWidth: 0.5
+      zPosition: 0
+      slicerColor: {r: 1, g: 0.08363296, b: 0, a: 1}
+      lineBorder: 0
+      lineEndSize: 0.05
+      vertexSpace: 0.25
+      borderScale: 2
+      minVertexDistance: 1
+      customMaterial: 0
+      customFillMaterial: {fileID: 0}
+      customBoarderMaterial: {fileID: 0}
+      sortingLayer:
+        Name: 
+        Order: 0
+      customEndingsImage: 0
+      customEndingImageMaterial: {fileID: 0}
+    sliceLayer:
+      layer: 0
+      layers: 0000000000000000
+    complexSliceType: 1
+    autocomplete: 0
+    autocompleteDisplay: 0
+    autocompleteDistance: 1
+    minVertexDistance: 0.5
+    endSliceIfPossible: 0
+    startSliceIfPossible: 0
+    sliceJoints: 0
+    addForce: 1
+    addForceAmount: 5
+  complexCutControllerObject:
+    input:
+      multiTouch: 1
+    visuals:
+      lineEndingType: 0
+      lineEndingEdgeCount: 6
+      drawSlicer: 1
+      visualScale: 0.5
+      lineWidth: 1
+      lineEndWidth: 0.5
+      zPosition: 0
+      slicerColor: {r: 1, g: 0.08363296, b: 0, a: 1}
+      lineBorder: 0
+      lineEndSize: 0.05
+      vertexSpace: 0.25
+      borderScale: 2
+      minVertexDistance: 1
+      customMaterial: 0
+      customFillMaterial: {fileID: 0}
+      customBoarderMaterial: {fileID: 0}
+      sortingLayer:
+        Name: 
+        Order: 0
+      customEndingsImage: 0
+      customEndingImageMaterial: {fileID: 0}
+    sliceLayer:
+      layer: 0
+      layers: 0000000000000000
+    cutSize: 0.5
+    minVertexDistance: 1
+  complexTrackedControllerObject:
+    input:
+      multiTouch: 1
+    visuals:
+      lineEndingType: 0
+      lineEndingEdgeCount: 6
+      drawSlicer: 1
+      visualScale: 0.5
+      lineWidth: 1
+      lineEndWidth: 0.5
+      zPosition: 0
+      slicerColor: {r: 1, g: 0.08363296, b: 0, a: 1}
+      lineBorder: 0
+      lineEndSize: 0.05
+      vertexSpace: 0.25
+      borderScale: 2
+      minVertexDistance: 1
+      customMaterial: 0
+      customFillMaterial: {fileID: 0}
+      customBoarderMaterial: {fileID: 0}
+      sortingLayer:
+        Name: 
+        Order: 0
+      customEndingsImage: 0
+      customEndingImageMaterial: {fileID: 0}
+    sliceLayer:
+      layer: 0
+      layers: 0000000000000000
+    complexSliceType: 1
+    minVertexDistance: 1
+  complexTrailControllerObject:
+    input:
+      multiTouch: 1
+    visuals:
+      lineEndingType: 0
+      lineEndingEdgeCount: 6
+      drawSlicer: 1
+      visualScale: 0.5
+      lineWidth: 1
+      lineEndWidth: 0.5
+      zPosition: 0
+      slicerColor: {r: 1, g: 0.08363296, b: 0, a: 1}
+      lineBorder: 0
+      lineEndSize: 0.05
+      vertexSpace: 0.25
+      borderScale: 2
+      minVertexDistance: 1
+      customMaterial: 0
+      customFillMaterial: {fileID: 0}
+      customBoarderMaterial: {fileID: 0}
+      sortingLayer:
+        Name: 
+        Order: 0
+      customEndingsImage: 0
+      customEndingImageMaterial: {fileID: 0}
+    sliceLayer:
+      layer: 0
+      layers: 0000000000000000
+    trailRenderer:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    trailRendererCount: 1
+    addForce: 1
+    addForceAmount: 5
+  complexClickControllerObject:
+    input:
+      multiTouch: 1
+    visuals:
+      lineEndingType: 0
+      lineEndingEdgeCount: 6
+      drawSlicer: 1
+      visualScale: 0.5
+      lineWidth: 1
+      lineEndWidth: 0.5
+      zPosition: 0
+      slicerColor: {r: 1, g: 0.08363296, b: 0, a: 1}
+      lineBorder: 0
+      lineEndSize: 0.05
+      vertexSpace: 0.25
+      borderScale: 2
+      minVertexDistance: 1
+      customMaterial: 0
+      customFillMaterial: {fileID: 0}
+      customBoarderMaterial: {fileID: 0}
+      sortingLayer:
+        Name: 
+        Order: 0
+      customEndingsImage: 0
+      customEndingImageMaterial: {fileID: 0}
+    sliceLayer:
+      layer: 0
+      layers: 0000000000000000
+    complexSliceType: 1
+    pointsLimit: 3
+    sliceJoints: 0
+    endSliceIfPossible: 0
+    addForce: 1
+    addForceAmount: 5
+  polygonControllerObject:
+    input:
+      multiTouch: 1
+    visuals:
+      lineEndingType: 0
+      lineEndingEdgeCount: 6
+      drawSlicer: 1
+      visualScale: 0.5
+      lineWidth: 1
+      lineEndWidth: 0.5
+      zPosition: 0
+      slicerColor: {r: 1, g: 0.08363296, b: 0, a: 1}
+      lineBorder: 0
+      lineEndSize: 0.05
+      vertexSpace: 0.25
+      borderScale: 2
+      minVertexDistance: 1
+      customMaterial: 0
+      customFillMaterial: {fileID: 0}
+      customBoarderMaterial: {fileID: 0}
+      sortingLayer:
+        Name: 
+        Order: 0
+      customEndingsImage: 0
+      customEndingImageMaterial: {fileID: 0}
+    sliceLayer:
+      layer: 0
+      layers: 0000000000000000
+    polygonType: 1
+    polygonSize: 1
+    polygonDestroy: 1
+    edgeCount: 30
+  createControllerObject:
+    input:
+      multiTouch: 1
+    visuals:
+      lineEndingType: 0
+      lineEndingEdgeCount: 6
+      drawSlicer: 1
+      visualScale: 0.5
+      lineWidth: 1
+      lineEndWidth: 0.5
+      zPosition: 0
+      slicerColor: {r: 1, g: 0.08363296, b: 0, a: 1}
+      lineBorder: 0
+      lineEndSize: 0.05
+      vertexSpace: 0.25
+      borderScale: 2
+      minVertexDistance: 1
+      customMaterial: 0
+      customFillMaterial: {fileID: 0}
+      customBoarderMaterial: {fileID: 0}
+      sortingLayer:
+        Name: 
+        Order: 0
+      customEndingsImage: 0
+      customEndingImageMaterial: {fileID: 0}
+    sliceLayer:
+      layer: 0
+      layers: 0000000000000000
+    createType: 0
+    polygonType: 1
+    polygonSize: 1
+    edgeCount: 30
+    material: {fileID: 0}
+  pointControllerObject:
+    input:
+      multiTouch: 1
+    visuals:
+      lineEndingType: 0
+      lineEndingEdgeCount: 6
+      drawSlicer: 1
+      visualScale: 0.5
+      lineWidth: 1
+      lineEndWidth: 0.5
+      zPosition: 0
+      slicerColor: {r: 1, g: 0.08363296, b: 0, a: 1}
+      lineBorder: 0
+      lineEndSize: 0.05
+      vertexSpace: 0.25
+      borderScale: 2
+      minVertexDistance: 1
+      customMaterial: 0
+      customFillMaterial: {fileID: 0}
+      customBoarderMaterial: {fileID: 0}
+      sortingLayer:
+        Name: 
+        Order: 0
+      customEndingsImage: 0
+      customEndingImageMaterial: {fileID: 0}
+    sliceLayer:
+      layer: 0
+      layers: 0000000000000000
+    sliceRotation: 0
+  explodeControllerObject:
+    input:
+      multiTouch: 1
+    visuals:
+      lineEndingType: 0
+      lineEndingEdgeCount: 6
+      drawSlicer: 1
+      visualScale: 0.5
+      lineWidth: 1
+      lineEndWidth: 0.5
+      zPosition: 0
+      slicerColor: {r: 1, g: 0.08363296, b: 0, a: 1}
+      lineBorder: 0
+      lineEndSize: 0.05
+      vertexSpace: 0.25
+      borderScale: 2
+      minVertexDistance: 1
+      customMaterial: 0
+      customFillMaterial: {fileID: 0}
+      customBoarderMaterial: {fileID: 0}
+      sortingLayer:
+        Name: 
+        Order: 0
+      customEndingsImage: 0
+      customEndingImageMaterial: {fileID: 0}
+    sliceLayer:
+      layer: 0
+      layers: 0000000000000000
+    addForce: 1
+    addForceAmount: 5
+    explodeFromPoint: 0
+  mergerComplexControllerObject:
+    input:
+      multiTouch: 1
+    visuals:
+      lineEndingType: 0
+      lineEndingEdgeCount: 6
+      drawSlicer: 1
+      visualScale: 0.5
+      lineWidth: 1
+      lineEndWidth: 0.5
+      zPosition: 0
+      slicerColor: {r: 1, g: 0.08363296, b: 0, a: 1}
+      lineBorder: 0
+      lineEndSize: 0.05
+      vertexSpace: 0.25
+      borderScale: 2
+      minVertexDistance: 1
+      customMaterial: 0
+      customFillMaterial: {fileID: 0}
+      customBoarderMaterial: {fileID: 0}
+      sortingLayer:
+        Name: 
+        Order: 0
+      customEndingsImage: 0
+      customEndingImageMaterial: {fileID: 0}
+    sliceLayer:
+      layer: 0
+      layers: 0000000000000000
+    complexSliceType: 1
+    autocomplete: 0
+    autocompleteDisplay: 0
+    autocompleteDistance: 1
+    minVertexDistance: 1
+    endSliceIfPossible: 0
+    startSliceIfPossible: 0
+  mergerPolygonControllerObject:
+    input:
+      multiTouch: 1
+    visuals:
+      lineEndingType: 0
+      lineEndingEdgeCount: 6
+      drawSlicer: 1
+      visualScale: 0.5
+      lineWidth: 1
+      lineEndWidth: 0.5
+      zPosition: 0
+      slicerColor: {r: 1, g: 0.08363296, b: 0, a: 1}
+      lineBorder: 0
+      lineEndSize: 0.05
+      vertexSpace: 0.25
+      borderScale: 2
+      minVertexDistance: 1
+      customMaterial: 0
+      customFillMaterial: {fileID: 0}
+      customBoarderMaterial: {fileID: 0}
+      sortingLayer:
+        Name: 
+        Order: 0
+      customEndingsImage: 0
+      customEndingImageMaterial: {fileID: 0}
+    sliceLayer:
+      layer: 0
+      layers: 0000000000000000
+    polygonType: 1
+    polygonSize: 1
+    edgeCount: 30
+  UIBlocking: 1
+--- !u!1 &587883538
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 587883541}
+  - component: {fileID: 587883540}
+  - component: {fileID: 587883539}
+  m_Layer: 0
+  m_Name: Square (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!61 &587883539
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 587883538}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!212 &587883540
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 587883538}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &587883541
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 587883538}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -4.75, z: 0}
+  m_LocalScale: {x: 10, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &611208030
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 611208033}
+  - component: {fileID: 611208032}
+  - component: {fileID: 611208035}
+  - component: {fileID: 611208034}
+  - component: {fileID: 611208036}
+  - component: {fileID: 611208037}
+  m_Layer: 0
+  m_Name: test
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!212 &611208032
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 611208030}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: d3f130b5919327745aebf7e0af2e77cb, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &611208033
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 611208030}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.00000017881393, y: 2.34, z: 0}
+  m_LocalScale: {x: 0.5, y: 1.5808944, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &611208034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 611208030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13d57bfb5a556c741a71b82d65a1e10e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textureType: 0
+  slicingLayer: 0
+  colliderType: 0
+  materialSettings:
+    triangulation: 0
+    material: {fileID: 0}
+    sideMaterial: {fileID: 0}
+    scale: {x: 1, y: 1}
+    offset: {x: 0, y: 0}
+    depth: 1
+    batchMaterial: 0
+  shapeType: 0
+  instantiateMethod: 0
+  centerOfSlice: 0
+  recalculateMass: 0
+  supportJoints: 0
+  anchor:
+    enable: 0
+    anchorsList:
+    - {fileID: 0}
+    anchorType: 0
+    anchorColliders: []
+  afterSliceRemoveOrigin: 1
+--- !u!50 &611208035
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 611208030}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &611208036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 611208030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccf3d04ba5e71df47aa1d17200d72169, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!61 &611208037
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 611208030}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.44, y: 3.32}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.44, y: 3.32}
+  m_EdgeRadius: 0
+--- !u!1 &852991875
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 852991877}
+  - component: {fileID: 852991876}
+  - component: {fileID: 852991878}
+  m_Layer: 0
+  m_Name: Square
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!212 &852991876
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 852991875}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &852991877
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 852991875}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -6.125, y: -2.5, z: 0}
+  m_LocalScale: {x: 9.75, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &852991878
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 852991875}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &1181203288
 GameObject:
   m_ObjectHideFlags: 0
@@ -206,4 +1187,115 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1460842084
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1460842087}
+  - component: {fileID: 1460842086}
+  - component: {fileID: 1460842085}
+  m_Layer: 0
+  m_Name: Square (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!61 &1460842085
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1460842084}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!212 &1460842086
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1460842084}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &1460842087
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1460842084}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 6.125, y: -2.5, z: 0}
+  m_LocalScale: {x: 9.75, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class test : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public float timescale =1f;
+
+    private void Update()
     {
-        GameManager.Instance.soundHandler.Play("test");   
+        Time.timeScale = timescale;
     }
 }

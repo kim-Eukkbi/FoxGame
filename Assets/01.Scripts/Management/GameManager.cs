@@ -55,10 +55,18 @@ public class GameManager : MonoBehaviour
 
     internal SoundHandler soundHandler;
     internal SliceHandler sliceHandler;
+    internal TimeHandler timeHandler;
 
 
     public void OnAwake()
     {
 
     }
+}
+
+[System.Serializable]
+public enum EventEnum
+{
+    ChunkRemove,
+    ChunkRespawn
 }

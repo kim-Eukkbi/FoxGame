@@ -24,8 +24,8 @@ public class Chunk : MonoBehaviour  , IPoolableComponent
         moveTween = transform.DOMove(disablePoint, 10f).SetEase(Ease.Linear).SetSpeedBased().OnComplete(() =>
         {
             SetDisable();
-            EventManager<string, Chunk>.Invoke("Remove", this);
-            EventManager<string, string>.Invoke("Respawn", "");
+            EventManager<EventEnum, Chunk>.Invoke(EventEnum.ChunkRemove, this);
+            EventManager<EventEnum, string>.Invoke(EventEnum.ChunkRespawn, "");
         });
     }
 

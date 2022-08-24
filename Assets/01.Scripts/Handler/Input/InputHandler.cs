@@ -26,7 +26,7 @@ public class InputHandler : Handler
                     GameManager.Instance.sliceHandler.SetSlice(true);
                 }
 
-                
+                EventManager<EventEnum, KeyCode>.Invoke(EventEnum.PlayerInput, KeyCode.Space);
             }
 
 

@@ -68,5 +68,6 @@ public class GameManager : MonoBehaviour
 public enum EventEnum
 {
     ChunkRemove,
-    ChunkRespawn
+    ChunkRespawn,
+    PlayerInput
 }

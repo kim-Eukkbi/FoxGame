@@ -69,5 +69,6 @@ public enum EventEnum
 {
     ChunkRemove,
     ChunkRespawn,
+    ChunkTypeSend,
     PlayerInput
 }

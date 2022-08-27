@@ -8,6 +8,7 @@ public class PlayerAnimation : MonoBehaviour
     private Animator playerAnimator;
 
     private bool isJumped = false;
+    private bool isAttacked = false;
 
     public void Start()
     {
@@ -22,20 +23,36 @@ public class PlayerAnimation : MonoBehaviour
             case KeyCode.Space:
                 PlayJumpAnimation();
                 break;
-            default:
+            case KeyCode.Z:
+                PlayAttacAnimation();
                 break;
+            default:
+
+                break;
+        }
+    }
+
+    public void PlayAttacAnimation()
+    {
+        if (isAttacked)
+        {
+            return;
+        }
+        else
+        {
+            StartCoroutine(AttackCo());
         }
     }
 
     public void PlayJumpAnimation()
     {
-        if(!isJumped)
+        if(isJumped)
         {
-            StartCoroutine(JumpCo());
+            return;
         }
         else
         {
-            return;
+            StartCoroutine(JumpCo());
         }
     }
 
@@ -46,6 +63,15 @@ public class PlayerAnimation : MonoBehaviour
         yield return new WaitForSeconds(.7f);
         SetBool("isJump", false);
         isJumped = false;
+    }
+
+    public IEnumerator AttackCo()
+    {
+        SetBool("isAttack", true);
+        isAttacked = true;
+        yield return new WaitForSeconds(.5f);
+        SetBool("isAttack", false);
+        isAttacked = false;
     }
 
 

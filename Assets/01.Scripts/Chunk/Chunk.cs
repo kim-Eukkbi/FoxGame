@@ -5,7 +5,7 @@ using DG.Tweening;
 
 public class Chunk : MonoBehaviour  , IPoolableComponent
 {
-
+    public ChunkType chunkType;
     private Vector2 disablePoint = new Vector2(-20f, 0);
     internal Tween moveTween;
 
@@ -27,6 +27,20 @@ public class Chunk : MonoBehaviour  , IPoolableComponent
             EventManager<EventEnum, Chunk>.Invoke(EventEnum.ChunkRemove, this);
             EventManager<EventEnum, string>.Invoke(EventEnum.ChunkRespawn, "");
         });
+        StartCoroutine(ChangeBackGround());
     }
 
+    public IEnumerator ChangeBackGround()
+    {
+        yield return new WaitForSeconds(5f);
+        EventManager<EventEnum, ChunkType>.Invoke(EventEnum.ChunkTypeSend, chunkType);
+    }
+
+}
+
+public enum ChunkType
+{
+    Island,
+    Lab,
+    City
 }

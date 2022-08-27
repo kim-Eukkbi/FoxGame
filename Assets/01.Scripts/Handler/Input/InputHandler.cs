@@ -19,22 +19,23 @@ public class InputHandler : Handler
         while(true)
         {
             yield return null;
-            if (Input.GetKey(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.Space))
             {
-                if(Input.GetMouseButtonDown(0))
-                {
-                    GameManager.Instance.sliceHandler.SetSlice(true);
-                }
-
                 EventManager<EventEnum, KeyCode>.Invoke(EventEnum.PlayerInput, KeyCode.Space);
             }
 
+            if (Input.GetMouseButtonDown(0))
+            {
+                EventManager<EventEnum, KeyCode>.Invoke(EventEnum.PlayerInput, KeyCode.Z);
+               // GameManager.Instance.sliceHandler.SetSlice(true);
+            }
 
-            if (Input.GetMouseButtonUp(0))
+
+           /* if (Input.GetMouseButtonUp(0))
             {
                 yield return null;
                 GameManager.Instance.sliceHandler.SetSlice(false);
-            }
+            }*/
         }
     }
 }

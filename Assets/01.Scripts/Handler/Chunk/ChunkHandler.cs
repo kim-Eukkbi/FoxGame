@@ -34,6 +34,7 @@ public class ChunkHandler : Handler
         for (int i = 0; i < 3; i++)
         {
             Chunk a = GameObjectPoolManager.Instance.GetGameObject("PreFabs/Chunk/" + chunkAddrs[Random.Range(0, chunkAddrs.Count)], transform).GetComponent<Chunk>();
+            a.chunkType = ChunkType.Island;
             chunks.Add(a);
         }
         chunks[0].transform.position = Vector2.zero;
@@ -52,6 +53,7 @@ public class ChunkHandler : Handler
     {
         Chunk a = GameObjectPoolManager.Instance.GetGameObject("PreFabs/Chunk/" + chunkAddrs[Random.Range(0, chunkAddrs.Count)], transform).GetComponent<Chunk>();
         a.transform.position = chunks[chunks.Count -1].transform.position + chunkOffset;
+        a.chunkType = ChunkType.Island;
         chunks.Add(a);
     }
 

@@ -5,9 +5,10 @@ using UnityEngine;
 public class BackGroundHandler : Handler
 {
     [SerializeField]
-    private SpriteRenderer bg;
+    private List<MeshRenderer> bg;
     [SerializeField]
     private List<Sprite> bgImgs;
+
 
     public override void OnAwake()
     {
@@ -16,19 +17,25 @@ public class BackGroundHandler : Handler
 
     public override void OnStart()
     {
-        EventManager<EventEnum, ChunkType>.AddEvent(EventEnum.ChunkTypeSend, ChangeBackGround);
-        StartCoroutine(MoveingBackGround());
-    }
-
-    private IEnumerator MoveingBackGround()
-    {
-        while(true)
+        //EventManager<EventEnum, ChunkType>.AddEvent(EventEnum.ChunkTypeSend, ChangeBackGround);
+        // StartCoroutine(MoveingBackGround());
+        for(int i =0; i < bg.Count;i++)
         {
-            yield return null;
-            bg.material.mainTextureOffset += new Vector2(Time.deltaTime * .5f, 0);
+            StartCoroutine(MoveingBackGround(bg[i],0.5f - i/10f));
         }
     }
 
+    private IEnumerator MoveingBackGround(MeshRenderer mr,float speed)
+    {
+        Vector2 xOffset = Vector2.zero;
+        while (true)
+        {
+            yield return null;
+            xOffset += new Vector2(Time.deltaTime * speed, 0);
+            mr.material.SetTextureOffset("_MainTex", xOffset);
+        }
+    }
+/*
     private void ChangeBackGround(ChunkType type)
     {
         switch(type)
@@ -43,5 +50,5 @@ public class BackGroundHandler : Handler
                 bg.sprite = bgImgs[2];
                 break;
         }
-    }
+    }*/
 }

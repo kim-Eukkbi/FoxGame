@@ -11,21 +11,27 @@ public class ChunkHandler : Handler
     private Vector3 chunkOffset = new Vector3(17.5f, 0);
     private List<Chunk> chunks = new List<Chunk>();
     private List<string> chunkAddrs = new List<string>();
-    private string chunkroot = "Assets\\Resources\\PreFabs\\Chunk";
 
     public override void OnAwake()
     {
         EventManager<EventEnum, Chunk>.AddEvent(EventEnum.ChunkRemove, RemoveList);
         EventManager<EventEnum, string>.AddEvent(EventEnum.ChunkRespawn, Respawn);
+       // chunkroot = Application.dataPath + "\\Resources\\PreFabs\\Chunk";
+
     }
 
     public override void OnStart()
     {
-        chunkAddrs = Directory.GetFiles(chunkroot).ToList();
-        for (int i = 0; i < chunkAddrs.Count; i++)
+        List<Object> list = Resources.LoadAll("PreFabs/Chunk/").ToList();
+        foreach (var item in list)
+        {
+            chunkAddrs.Add(item.name);
+        }
+       // chunkAddrs = Directory.GetFiles(chunkroot).ToList();
+      /*  for (int i = 0; i < chunkAddrs.Count; i++)
         {
             chunkAddrs[i] = Path.GetFileName(chunkAddrs[i]).Split('.')[0];
-        }
+        }*/
         FirstSpawn();
     }
 

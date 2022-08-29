@@ -4,6 +4,7 @@ using System.Reflection;
 using UnityEditor;
 using UnityEngine;
 
+#if UNITY_EDITOR
 [InitializeOnLoad]
 public static class PrettyHierarchy
 {
@@ -101,3 +102,4 @@ public static class PrettyHierarchy
         }
     }
 }
+#endif

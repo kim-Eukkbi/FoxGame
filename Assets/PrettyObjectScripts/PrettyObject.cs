@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEditor;
 
+#if UNITY_EDITOR
 [DisallowMultipleComponent]
 [AddComponentMenu("Pretty Objects/Pretty Object")]
 public class PrettyObject : MonoBehaviour
@@ -58,3 +59,4 @@ public class PrettyObject : MonoBehaviour
         }
     }
 }
+#endif

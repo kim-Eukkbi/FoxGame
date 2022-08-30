@@ -11,10 +11,13 @@ public class ChunkHandler : Handler
     private Vector3 chunkOffset = new Vector3(17.5f, 0);
     private List<Chunk> chunks = new List<Chunk>();
     private List<string> chunkAddrs = new List<string>();
+    private Coroutine startco;
+    private bool istart = false;
 
     public override void OnAwake()
     {
         EventManager<EventEnum, Chunk>.AddEvent(EventEnum.ChunkRemove, RemoveList);
+        EventManager<EventEnum, string>.AddEvent(EventEnum.GameStart, StartGame);
         EventManager<EventEnum, string>.AddEvent(EventEnum.ChunkRespawn, Respawn);
        // chunkroot = Application.dataPath + "\\Resources\\PreFabs\\Chunk";
 
@@ -27,13 +30,21 @@ public class ChunkHandler : Handler
         {
             chunkAddrs.Add(item.name);
         }
-       // chunkAddrs = Directory.GetFiles(chunkroot).ToList();
-      /*  for (int i = 0; i < chunkAddrs.Count; i++)
-        {
-            chunkAddrs[i] = Path.GetFileName(chunkAddrs[i]).Split('.')[0];
-        }*/
+
+        WaitForStart();
+
+    }
+
+    private void WaitForStart()
+    {
         FirstSpawn();
     }
+
+    private void StartGame(string justForevent)
+    {
+        istart = true;
+    }
+
 
     private void FirstSpawn()
     {
@@ -57,7 +68,17 @@ public class ChunkHandler : Handler
 
     public void Respawn(string justForevent)
     {
-        Chunk a = GameObjectPoolManager.Instance.GetGameObject("PreFabs/Chunk/" + chunkAddrs[Random.Range(0, chunkAddrs.Count)], transform).GetComponent<Chunk>();
+        int i = 0;
+        if(!istart)
+        {
+            i = 0;
+        }
+        else
+        {
+            i = Random.Range(0, chunkAddrs.Count);
+        }
+
+        Chunk a = GameObjectPoolManager.Instance.GetGameObject("PreFabs/Chunk/" + chunkAddrs[i], transform).GetComponent<Chunk>();
         a.transform.position = chunks[chunks.Count -1].transform.position + chunkOffset;
         a.chunkType = ChunkType.Island;
         chunks.Add(a);

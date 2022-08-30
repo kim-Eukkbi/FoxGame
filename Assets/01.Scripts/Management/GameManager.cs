@@ -94,5 +94,6 @@ public enum EventEnum
     ChunkRemove,
     ChunkRespawn,
     ChunkTypeSend,
+    GameStart,
     PlayerInput
 }

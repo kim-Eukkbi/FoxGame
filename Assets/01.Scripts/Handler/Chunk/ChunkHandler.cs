@@ -11,7 +11,6 @@ public class ChunkHandler : Handler
     private Vector3 chunkOffset = new Vector3(17.5f, 0);
     private List<Chunk> chunks = new List<Chunk>();
     private List<string> chunkAddrs = new List<string>();
-    private Coroutine startco;
     private bool istart = false;
 
     public override void OnAwake()
@@ -19,6 +18,8 @@ public class ChunkHandler : Handler
         EventManager<EventEnum, Chunk>.AddEvent(EventEnum.ChunkRemove, RemoveList);
         EventManager<EventEnum, string>.AddEvent(EventEnum.GameStart, StartGame);
         EventManager<EventEnum, string>.AddEvent(EventEnum.ChunkRespawn, Respawn);
+        chunks.Clear();
+        chunkAddrs.Clear();
        // chunkroot = Application.dataPath + "\\Resources\\PreFabs\\Chunk";
 
     }
@@ -26,6 +27,7 @@ public class ChunkHandler : Handler
     public override void OnStart()
     {
         List<Object> list = Resources.LoadAll("PreFabs/Chunk/").ToList();
+        print("Ω√¿€");
         foreach (var item in list)
         {
             chunkAddrs.Add(item.name);

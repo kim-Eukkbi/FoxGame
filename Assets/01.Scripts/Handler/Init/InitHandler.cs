@@ -8,6 +8,7 @@ public class InitHandler : MonoBehaviour
 
     private void Awake()
     {
+        handlers.Clear();
         GetComponentsInChildren(handlers);
 
         for (int i = 0; i < handlers.Count; i++)

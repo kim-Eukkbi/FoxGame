@@ -58,16 +58,15 @@ public class GameManager : MonoBehaviour
     internal SoundHandler soundHandler;
     internal SliceHandler sliceHandler;
     internal TimeHandler timeHandler;
-    internal InitHandler initHandler;
 
 
     public void OnAwake()
     {
+        DOTween.KillAll();
         Application.targetFrameRate = 120;
         Screen.SetResolution(1920, 1080, true);
         SetResolution();
     }
-
 
 
     public void SetResolution()
@@ -94,14 +93,11 @@ public class GameManager : MonoBehaviour
 
     public void ReSetting()
     {
-        ResetEvents();
-        SceneManager.LoadScene("InGame");
-    }
-
-    private void ResetEvents()
-    {
-        EventManager<string,string>.RemoveAllEvents();
+        EventManager<EventEnum, string>.RemoveAllEvents();
+        EventManager<EventEnum, Chunk>.RemoveAllEvents();
+        EventManager<EventEnum, KeyCode>.RemoveAllEvents();
         DOTween.KillAll();
+        SceneManager.LoadScene("InGame",LoadSceneMode.Single);
     }
 }
 

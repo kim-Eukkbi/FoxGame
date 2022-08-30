@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
+using UnityEngine.SceneManagement;
 
 public class UIHandler : Handler
 {
@@ -11,7 +12,7 @@ public class UIHandler : Handler
     [SerializeField]
     private Button settingBtn;
     [SerializeField]
-    private Button PlayBtn;
+    private Button playBtn;
 
 
 
@@ -34,6 +35,13 @@ public class UIHandler : Handler
     [SerializeField]
     private List<Sprite> volimgs;
 
+    [SerializeField, Header("게임오버")]
+    private CanvasGroup gameover;
+    [SerializeField]
+    private Button retrybtn;
+    [SerializeField]
+    private Button toTitlebtn;
+
     public override void OnAwake()
     {
 
@@ -41,7 +49,10 @@ public class UIHandler : Handler
 
     public override void OnStart()
     {
-        PlayBtn.onClick.AddListener(PressStartBtn);
+        playBtn.onClick.AddListener(PressStartBtn);
+        settingBtn.onClick.AddListener(OpenSetting);
+        SettingInit();
+        GameOverInit();
     }
 
     private void PressStartBtn()
@@ -58,6 +69,17 @@ public class UIHandler : Handler
         sfxbtn.onClick.AddListener(() => Mute(sfxbtn));
     }
 
+    private void GameOverInit()
+    {
+        retrybtn.onClick.AddListener(Restart);
+        toTitlebtn.onClick.AddListener(Restart);
+    }
+
+    private void Restart()
+    {
+        GameManager.Instance.ReSetting();
+    }
+
     private void Mute(Button mybtn)
     {
         if(mybtn.image.sprite == volimgs[0])
@@ -72,7 +94,12 @@ public class UIHandler : Handler
 
     private void OffSetting()
     {
-        setting.alpha = 0;
-        setting.gameObject.SetActive(false);
+        setting.DOFade(0, .5f).OnComplete(() => setting.gameObject.SetActive(false));
+    }
+
+    private void OpenSetting()
+    {
+        setting.gameObject.SetActive(true);
+        setting.DOFade(1, .5f);
     }
 }

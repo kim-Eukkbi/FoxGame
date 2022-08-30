@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -56,6 +58,7 @@ public class GameManager : MonoBehaviour
     internal SoundHandler soundHandler;
     internal SliceHandler sliceHandler;
     internal TimeHandler timeHandler;
+    internal InitHandler initHandler;
 
 
     public void OnAwake()
@@ -64,6 +67,8 @@ public class GameManager : MonoBehaviour
         Screen.SetResolution(1920, 1080, true);
         SetResolution();
     }
+
+
 
     public void SetResolution()
     {
@@ -86,6 +91,18 @@ public class GameManager : MonoBehaviour
             Camera.main.rect = new Rect(0f, (1f - newHeight) / 2f, 1f, newHeight); // 새로운 Rect 적용
         }
     }
+
+    public void ReSetting()
+    {
+        ResetEvents();
+        SceneManager.LoadScene("InGame");
+    }
+
+    private void ResetEvents()
+    {
+        EventManager<string,string>.RemoveAllEvents();
+        DOTween.KillAll();
+    }
 }
 
 [System.Serializable]
@@ -95,5 +112,7 @@ public enum EventEnum
     ChunkRespawn,
     ChunkTypeSend,
     GameStart,
+    GameOver,
+    GameRestart,
     PlayerInput
 }

@@ -8,7 +8,7 @@ public class PlayerHp : MonoBehaviour
     [SerializeField]
     private int Hp = 3;
 
-    public void SetHp(int damege)
+    public void SetDamage(int damege)
     {
         Hp -= damege;
         if(Hp <=0)
@@ -19,6 +19,6 @@ public class PlayerHp : MonoBehaviour
 
     public void Dead()
     {
-
+        EventManager<EventEnum, string>.Invoke(EventEnum.GameOver, "");
     }
 }

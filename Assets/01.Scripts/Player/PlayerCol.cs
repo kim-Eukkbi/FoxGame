@@ -14,7 +14,11 @@ public class PlayerCol : MonoBehaviour
         }
         else if(other.CompareTag("Obstacle"))
         {
-            transform.GetComponent<PlayerHp>().SetHp(1);
+            transform.GetComponentInParent<PlayerHp>().SetDamage(1);
+        }
+        else if (other.CompareTag("Drop"))
+        {
+            transform.GetComponentInParent<PlayerHp>().SetDamage(3);
         }
     }
 

@@ -21,6 +21,7 @@ public class Chunk : MonoBehaviour  , IPoolableComponent
 
     public void Spawned()
     {
+        EventManager<EventEnum, string>.AddEvent(EventEnum.SlowDown, SlowDown);
         moveTween = transform.DOMove(disablePoint, 10f).SetEase(Ease.Linear).SetSpeedBased().OnComplete(() =>
         {
             SetDisable();
@@ -34,6 +35,11 @@ public class Chunk : MonoBehaviour  , IPoolableComponent
     {
         yield return new WaitForSeconds(5f);
         EventManager<EventEnum, ChunkType>.Invoke(EventEnum.ChunkTypeSend, chunkType);
+    }
+
+    public void SlowDown(string a)
+    {
+        moveTween.DOTimeScale(0, .5f).SetEase(Ease.Linear).OnComplete(() => moveTween.Kill());
     }
 
 }

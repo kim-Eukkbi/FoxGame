@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class BackGroundHandler : Handler
 {
@@ -8,6 +9,7 @@ public class BackGroundHandler : Handler
     private List<MeshRenderer> bg;
     [SerializeField]
     private List<Sprite> bgImgs;
+    private float timeScale =1;
 
 
     public override void OnAwake()
@@ -18,6 +20,7 @@ public class BackGroundHandler : Handler
     public override void OnStart()
     {
         //EventManager<EventEnum, ChunkType>.AddEvent(EventEnum.ChunkTypeSend, ChangeBackGround);
+        EventManager<EventEnum, string>.AddEvent(EventEnum.SlowDown, SlowDown);
         // StartCoroutine(MoveingBackGround());
         for(int i =0; i < bg.Count;i++)
         {
@@ -31,10 +34,16 @@ public class BackGroundHandler : Handler
         while (true)
         {
             yield return null;
-            xOffset += new Vector2(Time.deltaTime * speed, 0);
+            xOffset += new Vector2(Time.deltaTime * speed * timeScale, 0);
             mr.material.SetTextureOffset("_MainTex", xOffset);
         }
     }
+
+    private void SlowDown(string a)
+    {
+        DOTween.To(() => timeScale, x => timeScale = x, 0, .5f).SetEase(Ease.Linear);
+    }
+
 /*
     private void ChangeBackGround(ChunkType type)
     {

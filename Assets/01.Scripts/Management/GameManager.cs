@@ -110,5 +110,6 @@ public enum EventEnum
     GameStart,
     GameOver,
     GameRestart,
-    PlayerInput
+    PlayerInput,
+    SlowDown
 }

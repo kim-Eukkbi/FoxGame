@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
 using UnityEngine.SceneManagement;
+using UnityEngine.Rendering.Universal;
 
 public class UIHandler : Handler
 {
@@ -41,6 +42,8 @@ public class UIHandler : Handler
     private Button retrybtn;
     [SerializeField]
     private Button toTitlebtn;
+    [SerializeField]
+    private Light2D highLight;
 
     public override void OnAwake()
     {
@@ -71,8 +74,33 @@ public class UIHandler : Handler
 
     private void GameOverInit()
     {
+        EventManager<EventEnum, string>.AddEvent(EventEnum.GameOver, GameOverAnim);
         retrybtn.onClick.AddListener(Restart);
         toTitlebtn.onClick.AddListener(Restart);
+    }
+
+    private void GameOverAnim(string a)
+    {
+        Sequence sequence = DOTween.Sequence();
+
+        retrybtn.interactable = false;
+        toTitlebtn.interactable = false;
+
+        highLight.intensity = 0;
+        highLight.pointLightOuterAngle = 180;
+
+        gameover.gameObject.SetActive(true);
+
+        EventManager<EventEnum, string>.Invoke(EventEnum.SlowDown, "");
+
+        sequence.Append(gameover.DOFade(1, 1f)).OnComplete(() =>
+        sequence.Append(DOTween.To(() => highLight.intensity, x => highLight.intensity = x, 3, 1f)));
+        sequence.Join(DOTween.To(() => highLight.pointLightOuterAngle, x => highLight.pointLightOuterAngle = x, 70, 2f)
+            .OnComplete(() =>
+            {
+                retrybtn.interactable = true;
+                toTitlebtn.interactable = true;
+            }));
     }
 
     private void Restart()

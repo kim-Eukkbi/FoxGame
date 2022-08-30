@@ -6,7 +6,8 @@ using DG.Tweening;
 public class PlayerJump : MonoBehaviour
 {
 
-    private bool isJumped= false;
+    public bool isJumped = false;
+    public bool isGround = false;
     private Rigidbody2D rigd;
 
     public void Start()
@@ -15,21 +16,49 @@ public class PlayerJump : MonoBehaviour
         EventManager<EventEnum, KeyCode>.AddEvent(EventEnum.PlayerInput, Jump);
     }
 
+/*    public void FixedUpdate()
+    {
+        if (isJumped && !isGround)
+        {
+            print("???");
+           
+        }
+    }*/
+
     private void Jump(KeyCode keyCode)
     {
-        if (!isJumped && keyCode == KeyCode.Space)
+        if (!isJumped && isGround && keyCode == KeyCode.Space)
             Jump();
     }
 
     private void Jump()
     {
         isJumped = true;
-        transform.DOMoveY(-.5f, .35f).OnComplete(()=>
+        print("???");
+        rigd.AddForce(Vector2.up * 5,ForceMode2D.Impulse);
+        /*transform.DOMoveY(-.5f, .35f).OnComplete(()=>
         {
             transform.DOMoveY(-2.24f, .35f).SetEase(Ease.Linear).OnComplete(() =>
             {
-                isJumped = false;
+                
             });
-        });
+        });*/
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Ground"))
+        {
+            isGround = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Ground"))
+        {
+            isGround = false;
+            isJumped = false;
+        }
     }
 }

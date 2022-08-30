@@ -6,17 +6,18 @@ TagManager:
   tags:
   - SetSlow
   - Obstacle
+  - Ground
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - BackGound
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
+  - Stencil
+  - Player
+  - Stenciltarget
+  - Ground
   - 
   - 
   - 

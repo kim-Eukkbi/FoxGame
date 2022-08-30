@@ -39,7 +39,7 @@ public class ChunkHandler : Handler
     {
         for (int i = 0; i < 3; i++)
         {
-            Chunk a = GameObjectPoolManager.Instance.GetGameObject("PreFabs/Chunk/" + chunkAddrs[Random.Range(0, chunkAddrs.Count)], transform).GetComponent<Chunk>();
+            Chunk a = GameObjectPoolManager.Instance.GetGameObject("PreFabs/Chunk/" + chunkAddrs[0], transform).GetComponent<Chunk>();
             a.chunkType = ChunkType.Island;
             chunks.Add(a);
         }

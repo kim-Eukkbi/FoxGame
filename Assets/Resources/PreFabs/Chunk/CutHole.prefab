@@ -160,8 +160,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e32bd92d418f7548a302c6ee445d1b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chunkType: 2
+  chunkType: 1
   isSliceable: 1
+  info:
+  - renderer: {fileID: 880073355731543555}
+    floortype: 0
+  - renderer: {fileID: 2973886256468668823}
+    floortype: 1
+  - renderer: {fileID: 1081945242657578122}
+    floortype: 3
 --- !u!1 &2328420602284919229
 GameObject:
   m_ObjectHideFlags: 0

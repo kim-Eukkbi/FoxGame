@@ -58,6 +58,7 @@ public class GameManager : MonoBehaviour
     internal SoundHandler soundHandler;
     internal SliceHandler sliceHandler;
     internal TimeHandler timeHandler;
+    internal SpriteHandler spriteHandler;
     public float score = 0f;
 
 

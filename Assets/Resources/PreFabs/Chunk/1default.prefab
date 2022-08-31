@@ -45,8 +45,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e32bd92d418f7548a302c6ee445d1b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chunkType: 2
+  chunkType: 1
   isSliceable: 0
+  info:
+  - renderer: {fileID: 1833663425088087388}
+    floortype: 2
+  - renderer: {fileID: 6667024929044875922}
+    floortype: 2
 --- !u!1001 &8851044489890282774
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -120,8 +125,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ca399270384520746b45dcd3eba1fe57, type: 3}
+--- !u!212 &1833663425088087388 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 7180779848583272522, guid: ca399270384520746b45dcd3eba1fe57, type: 3}
+  m_PrefabInstance: {fileID: 8851044489890282774}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3713586326240783979 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5286228735773823869, guid: ca399270384520746b45dcd3eba1fe57, type: 3}
+  m_PrefabInstance: {fileID: 8851044489890282774}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &6667024929044875922 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 2761618929661147012, guid: ca399270384520746b45dcd3eba1fe57, type: 3}
   m_PrefabInstance: {fileID: 8851044489890282774}
   m_PrefabAsset: {fileID: 0}

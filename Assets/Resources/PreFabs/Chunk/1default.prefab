@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e32bd92d418f7548a302c6ee445d1b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chunkType: 0
+  chunkType: 2
   isSliceable: 0
 --- !u!1001 &8851044489890282774
 PrefabInstance:

@@ -5,7 +5,9 @@ using DG.Tweening;
 
 public class Chunk : MonoBehaviour  , IPoolableComponent
 {
-    public ChunkType chunkType;
+    [SerializeField]
+    private ChunkType chunkType;
+
     public bool isSliceable = false;
     private Vector2 disablePoint = new Vector2(-20f, 0);
     internal Tween moveTween;

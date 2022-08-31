@@ -79,15 +79,15 @@ public class ChunkHandler : Handler
 
         Chunk a = GameObjectPoolManager.Instance.GetGameObject("PreFabs/Chunk/" + chunkAddrs[i], transform).GetComponent<Chunk>();
         a.transform.position = chunks[chunks.Count -1].transform.position + chunkOffset;
-        if (GameManager.Instance.score >= 20000)
+        if (GameManager.Instance.score >= 13000)
         {
-            //³¡
+            EventManager<EventEnum, string>.Invoke(EventEnum.GameOver, "");
         }
-        else if (GameManager.Instance.score >= 10000)
+        else if (GameManager.Instance.score >= 7000)
         {
             a.chunkType = ChunkType.Lake;
         }
-        else if (GameManager.Instance.score >= 5000)
+        else if (GameManager.Instance.score >= 3000)
         {
             a.chunkType = ChunkType.Island;
         }

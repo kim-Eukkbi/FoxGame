@@ -11,10 +11,12 @@ public class PlayerHp : MonoBehaviour
     public void SetDamage(int damege)
     {
         Hp -= damege;
-        if(Hp <=0)
+        if (Hp <=0)
         {
             Dead();
+            return;
         }
+        GameManager.Instance.uiHandler.SetHarts(Hp);
     }
 
     public void Dead()

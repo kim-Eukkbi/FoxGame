@@ -61,7 +61,7 @@ public class UIHandler : Handler
 
     public override void OnAwake()
     {
-
+        GameManager.Instance.uiHandler = this;
     }
 
     public override void OnStart()
@@ -69,11 +69,13 @@ public class UIHandler : Handler
         playBtn.onClick.AddListener(PressStartBtn);
         settingBtn.onClick.AddListener(OpenSetting);
         SettingInit();
-        GameOverInit(); ;
+        GameOverInit();
+        ResetHarts();
     }
 
     private void IngameUiInit()
     {
+        ingame.gameObject.SetActive(true);
         ingame.DOFade(1, 1f);
 
         pausebtn.onClick.AddListener(() =>
@@ -95,12 +97,12 @@ public class UIHandler : Handler
         }
     }
 
-    private void SetHarts(int hp)
+    public void SetHarts(int hp)
     {
-        hartimgs[hp - 1].sprite = harts[1];
+        hartimgs[hp].sprite = harts[1];
     }
 
-    private void ResetHarts()
+    public void ResetHarts()
     {
         for (int i = 0; i < 3; i++)
         {
@@ -118,6 +120,7 @@ public class UIHandler : Handler
 
     private void SettingInit()
     {
+        tutobtn.onClick.AddListener(Application.Quit);
         backbtn1.onClick.AddListener(OffSetting);
         backbtn2.onClick.AddListener(OffSetting);
         mainbtn.onClick.AddListener(() => Mute(mainbtn));
@@ -134,6 +137,8 @@ public class UIHandler : Handler
     private void GameOverAnim(string a)
     {
         GameManager.Instance.StopScore();
+        ingame.DOFade(0, 1f);
+        ingame.gameObject.SetActive(false);
 
         Sequence sequence = DOTween.Sequence();
 
@@ -178,11 +183,12 @@ public class UIHandler : Handler
     private void OffSetting()
     {
         setting.DOFade(0, .5f).OnComplete(() => setting.gameObject.SetActive(false));
+        Time.timeScale = 1f;
     }
 
     private void OpenSetting()
     {
         setting.gameObject.SetActive(true);
-        setting.DOFade(1, .5f);
+        setting.DOFade(1, .5f).OnComplete(() => Time.timeScale = 0f);
     }
 }

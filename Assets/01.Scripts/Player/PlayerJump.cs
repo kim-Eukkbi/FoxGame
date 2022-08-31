@@ -34,7 +34,7 @@ public class PlayerJump : MonoBehaviour
     private void Jump()
     {
         isJumped = true;
-        print("???");
+        rigd.velocity = Vector2.zero;
         rigd.AddForce(Vector2.up * 6,ForceMode2D.Impulse);
         /*transform.DOMoveY(-.5f, .35f).OnComplete(()=>
         {

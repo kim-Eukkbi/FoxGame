@@ -59,8 +59,9 @@ public class GameManager : MonoBehaviour
     internal SliceHandler sliceHandler;
     internal TimeHandler timeHandler;
     internal SpriteHandler spriteHandler;
+    internal UIHandler uiHandler;
     public float score = 0f;
-
+    
 
     public void OnAwake()
     {

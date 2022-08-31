@@ -35,7 +35,7 @@ public class PlayerJump : MonoBehaviour
     {
         isJumped = true;
         print("???");
-        rigd.AddForce(Vector2.up * 5,ForceMode2D.Impulse);
+        rigd.AddForce(Vector2.up * 6,ForceMode2D.Impulse);
         /*transform.DOMoveY(-.5f, .35f).OnComplete(()=>
         {
             transform.DOMoveY(-2.24f, .35f).SetEase(Ease.Linear).OnComplete(() =>

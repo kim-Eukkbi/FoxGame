@@ -22,24 +22,40 @@ public class InputHandler : Handler
             yield return null;
             if(!EventSystem.current.IsPointerOverGameObject())
             {
-                if (Input.GetKeyDown(KeyCode.Space))
+                if (Input.GetKeyDown(KeyCode.Space)|| Input.touchCount == 1)
                 {
                     EventManager<EventEnum, KeyCode>.Invoke(EventEnum.PlayerInput, KeyCode.Space);
                 }
 
-                if (Input.GetMouseButtonDown(0))
+                if (Input.GetKeyDown(KeyCode.Z) || Input.touchCount == 2)
                 {
                     EventManager<EventEnum, KeyCode>.Invoke(EventEnum.PlayerInput, KeyCode.Z);
                     // GameManager.Instance.sliceHandler.SetSlice(true);
                 }
 
+                if (Input.GetKeyDown(KeyCode.A))
+                {
+                    print("qweqwe");
+                    EventManager<EventEnum, ChunkType>.Invoke(EventEnum.ChunkTypeSend, ChunkType.Island);
+                }
 
-                /* if (Input.GetMouseButtonUp(0))
-                 {
-                     yield return null;
-                     GameManager.Instance.sliceHandler.SetSlice(false);
-                 }*/
-            }
+                if (Input.GetKeyDown(KeyCode.S))
+                {
+                    EventManager<EventEnum, ChunkType>.Invoke(EventEnum.ChunkTypeSend, ChunkType.Lab);
+                }
+
+
+                if (Input.GetKeyDown(KeyCode.D))
+                {
+                    EventManager<EventEnum, ChunkType>.Invoke(EventEnum.ChunkTypeSend, ChunkType.Lake);
+                }
+
+                    /* if (Input.GetMouseButtonUp(0))
+                     {
+                         yield return null;
+                         GameManager.Instance.sliceHandler.SetSlice(false);
+                     }*/
+                }
         }
     }
 }

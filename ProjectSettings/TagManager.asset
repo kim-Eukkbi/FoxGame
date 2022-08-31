@@ -9,6 +9,7 @@ TagManager:
   - Ground
   - Drop
   - EndSlow
+  - Sliceable
   layers:
   - Default
   - TransparentFX
@@ -20,7 +21,7 @@ TagManager:
   - Player
   - Stenciltarget
   - Ground
-  - 
+  - objCheck
   - 
   - 
   - 

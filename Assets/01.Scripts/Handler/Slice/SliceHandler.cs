@@ -20,13 +20,22 @@ public class SliceHandler : Handler
 
     public void SetSlice(bool isOn = true)
     {
-        if(isOn)
+        StartCoroutine(Set(isOn));
+
+        IEnumerator Set(bool isOn)
         {
-            sliceController.enabled = true;
+            if (isOn)
+            {
+                yield return new WaitForSeconds(.1f);
+                sliceController.enabled = true;
+            }
+            else
+            {
+                yield return new WaitForSeconds(.1f);
+                sliceController.enabled = false;
+            }
         }
-        else
-        {
-            sliceController.enabled = false;
-        }
+
+      
     }
 }

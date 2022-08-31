@@ -60,7 +60,7 @@ public class PlayerAnimation : MonoBehaviour
     {
         SetBool("isJump", true);
         isJumped = true;
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(1.2f);
         SetBool("isJump", false);
         isJumped = false;
     }

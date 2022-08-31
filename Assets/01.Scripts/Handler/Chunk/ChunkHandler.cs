@@ -20,8 +20,6 @@ public class ChunkHandler : Handler
         EventManager<EventEnum, string>.AddEvent(EventEnum.ChunkRespawn, Respawn);
         chunks.Clear();
         chunkAddrs.Clear();
-       // chunkroot = Application.dataPath + "\\Resources\\PreFabs\\Chunk";
-
     }
 
     public override void OnStart()
@@ -34,7 +32,6 @@ public class ChunkHandler : Handler
         }
 
         WaitForStart();
-
     }
 
     private void WaitForStart()

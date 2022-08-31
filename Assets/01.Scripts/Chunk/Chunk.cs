@@ -6,6 +6,7 @@ using DG.Tweening;
 public class Chunk : MonoBehaviour  , IPoolableComponent
 {
     public ChunkType chunkType;
+    public bool isSliceable = false;
     private Vector2 disablePoint = new Vector2(-20f, 0);
     internal Tween moveTween;
 
@@ -16,25 +17,29 @@ public class Chunk : MonoBehaviour  , IPoolableComponent
 
     public void SetDisable()
     {
-        GameObjectPoolManager.Instance.UnusedGameObject(gameObject);
+        if(isSliceable)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            GameObjectPoolManager.Instance.UnusedGameObject(gameObject);
+
+        }
     }
 
     public void Spawned()
     {
         EventManager<EventEnum, string>.AddEvent(EventEnum.SlowDown, SlowDown);
+        EventManager<EventEnum, ChunkType>.Invoke(EventEnum.ChunkTypeSend, chunkType);
+
         moveTween = transform.DOMove(disablePoint, 10f).SetEase(Ease.Linear).SetSpeedBased().OnComplete(() =>
         {
             SetDisable();
             EventManager<EventEnum, Chunk>.Invoke(EventEnum.ChunkRemove, this);
             EventManager<EventEnum, string>.Invoke(EventEnum.ChunkRespawn, "");
+            
         });
-        StartCoroutine(ChangeBackGround());
-    }
-
-    public IEnumerator ChangeBackGround()
-    {
-        yield return new WaitForSeconds(5f);
-        EventManager<EventEnum, ChunkType>.Invoke(EventEnum.ChunkTypeSend, chunkType);
     }
 
     public void SlowDown(string a)
@@ -48,5 +53,5 @@ public enum ChunkType
 {
     Island,
     Lab,
-    City
+    Lake
 }

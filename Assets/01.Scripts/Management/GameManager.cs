@@ -58,14 +58,42 @@ public class GameManager : MonoBehaviour
     internal SoundHandler soundHandler;
     internal SliceHandler sliceHandler;
     internal TimeHandler timeHandler;
+    public float score = 0f;
 
 
     public void OnAwake()
     {
         DOTween.KillAll();
+        Time.timeScale = 1f;
         Application.targetFrameRate = 120;
         Screen.SetResolution(1920, 1080, true);
         SetResolution();
+        EventManager<EventEnum, string>.AddEvent(EventEnum.GameStart, StartSetScore);
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    public void OnSceneLoaded(Scene scene,LoadSceneMode loadSceneMode)
+    {
+        score = 0;
+        DOTween.KillAll();
+        Time.timeScale = 1f;
+        Application.targetFrameRate = 120;
+        Screen.SetResolution(1920, 1080, true);
+        SetResolution();
+    }
+
+    public void StartSetScore(string a)
+    {
+        StartCoroutine(Score());
+
+        IEnumerator Score()
+        {
+            while (true)
+            {
+                yield return null;
+                score += Time.deltaTime * 100;
+            }
+        }
     }
 
 
@@ -96,8 +124,10 @@ public class GameManager : MonoBehaviour
         EventManager<EventEnum, string>.RemoveAllEvents();
         EventManager<EventEnum, Chunk>.RemoveAllEvents();
         EventManager<EventEnum, KeyCode>.RemoveAllEvents();
+        EventManager<EventEnum, ChunkType>.RemoveAllEvents();
         DOTween.KillAll();
         SceneManager.LoadScene("InGame",LoadSceneMode.Single);
+        
     }
 }
 

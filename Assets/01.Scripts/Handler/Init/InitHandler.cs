@@ -15,6 +15,7 @@ public class InitHandler : MonoBehaviour
         {
             handlers[i].OnAwake();
         }
+
     }
 
     private void Start()

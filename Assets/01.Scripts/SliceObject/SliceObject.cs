@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Slicer2D;
 using System;
+using DG.Tweening;
 
 public class SliceObject : MonoBehaviour
 {
@@ -16,9 +17,12 @@ public class SliceObject : MonoBehaviour
 
     private void Sliced(Slice2D slice)
     {
+        GameManager.Instance.sliceHandler.SetSlice(false);
+        GameManager.Instance.timeHandler.TimeScaleControll(1f, .5f, Ease.INTERNAL_Zero);
+
         var pice = slice.GetGameObjects();
         Rigidbody2D rigidbody = pice[0].GetComponent<Rigidbody2D>();
         rigidbody.bodyType = RigidbodyType2D.Dynamic;
-        rigidbody.gravityScale = 1f;
+        rigidbody.gravityScale = 2f;
     }
 }

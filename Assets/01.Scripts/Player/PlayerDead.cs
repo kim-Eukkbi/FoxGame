@@ -15,8 +15,12 @@ public class PlayerDead : MonoBehaviour
     {
         SpriteRenderer renderer = GetComponent<SpriteRenderer>();
         Sequence sequence = DOTween.Sequence();
-
-        sequence.Append(renderer.DOFade(0, 1f));
-        
+            
+        sequence.Append(renderer.DOFade(0, 1f).OnComplete(()=>{
+            GetComponentInParent<PlayerAnimation>().SetBool("isDead", true);
+            transform.parent.position = new Vector3(0, -2.3f, 0);
+            transform.GetComponentInParent<Rigidbody2D>().gravityScale = 0;
+        }));
+        sequence.Append(renderer.DOFade(1, 1f));
     }
 }

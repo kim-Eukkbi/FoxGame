@@ -11,6 +11,11 @@ public class PlayerCol : MonoBehaviour
         if(other.CompareTag("SetSlow"))
         {
             GameManager.Instance.timeHandler.TimeScaleControll(.3f, .3f,Ease.InQuad);
+            GameManager.Instance.sliceHandler.SetSlice(true);
+        }
+        else if(other.CompareTag("EndSlow"))
+        {
+           // GameManager.Instance.timeHandler.TimeScaleControll(1f, .5f, Ease.INTERNAL_Zero);
         }
         else if(other.CompareTag("Obstacle"))
         {
@@ -26,7 +31,6 @@ public class PlayerCol : MonoBehaviour
     {
         if (other.CompareTag("SetSlow"))
         {
-            GameManager.Instance.timeHandler.TimeScaleControll(1f, .5f,Ease.INTERNAL_Zero);
         }
         else if (other.CompareTag("Obstacle"))
         {

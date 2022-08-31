@@ -796,7 +796,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 548b53f71fd55c243a31b043dd6ca92c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sliceType: 4
+  sliceType: 0
   sliceLayer:
     layer: 0
     layers: 0000000000000000
@@ -2982,6 +2982,8 @@ GameObject:
   - component: {fileID: 918038890}
   - component: {fileID: 918038892}
   - component: {fileID: 918038891}
+  - component: {fileID: 918038894}
+  - component: {fileID: 918038895}
   - component: {fileID: 918038893}
   m_Layer: 7
   m_Name: playerSprite
@@ -3090,7 +3092,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.801661, y: -0.7107029}
+  m_Offset: {x: 0.801661, y: -0.5819969}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -3101,8 +3103,32 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.64942074, y: 0.6967664}
+  m_Size: {x: 0.64942074, y: 0.43935442}
   m_EdgeRadius: 0
+--- !u!114 &918038894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 918038889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e33644d5c58d5ae4e9481acba722f875, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &918038895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 918038889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ffe639cd5887f44991760aa1ab4c1fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &939849941
 GameObject:
   m_ObjectHideFlags: 0
@@ -6138,7 +6164,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.8902559, y: -1.1292685}
+  m_Offset: {x: 0.8902559, y: -0.98181903}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -6149,7 +6175,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.26343727, y: 0.075496435}
+  m_Size: {x: 0.26343727, y: 0.08049464}
   m_EdgeRadius: 0
 --- !u!1 &1915871587
 GameObject:

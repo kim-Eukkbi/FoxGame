@@ -44,6 +44,8 @@ public class UIHandler : Handler
     private Button toTitlebtn;
     [SerializeField]
     private Light2D highLight;
+    [SerializeField]
+    private Text score;
 
     public override void OnAwake()
     {
@@ -100,6 +102,7 @@ public class UIHandler : Handler
             {
                 retrybtn.interactable = true;
                 toTitlebtn.interactable = true;
+                score.DOText(((int)GameManager.Instance.score).ToString(), 1f,true,ScrambleMode.Numerals);
             }));
     }
 

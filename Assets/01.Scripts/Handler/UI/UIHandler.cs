@@ -15,6 +15,18 @@ public class UIHandler : Handler
     [SerializeField]
     private Button playBtn;
 
+    [SerializeField, Header("인게임")]
+    private CanvasGroup ingame;
+    [SerializeField]
+    private Button pausebtn;
+    [SerializeField]
+    private Text ingameScore;
+    [SerializeField]
+    private List<Image> hartimgs;
+    [SerializeField]
+    private List<Sprite> harts;
+
+
 
 
     [SerializeField, Header("설정창")]
@@ -57,14 +69,52 @@ public class UIHandler : Handler
         playBtn.onClick.AddListener(PressStartBtn);
         settingBtn.onClick.AddListener(OpenSetting);
         SettingInit();
-        GameOverInit();
+        GameOverInit(); ;
+    }
+
+    private void IngameUiInit()
+    {
+        ingame.DOFade(1, 1f);
+
+        pausebtn.onClick.AddListener(() =>
+        {
+            OpenSetting();
+        });
+
+
+
+        StartCoroutine(UpdateScore());
+
+        IEnumerator UpdateScore()
+        {
+            while (true)
+            {
+                yield return null;
+                ingameScore.text = "Score: " + ((int)GameManager.Instance.score).ToString();
+            }
+        }
+    }
+
+    private void SetHarts(int hp)
+    {
+        hartimgs[hp - 1].sprite = harts[1];
+    }
+
+    private void ResetHarts()
+    {
+        for (int i = 0; i < 3; i++)
+        {
+            hartimgs[i].sprite = harts[0];
+        }
     }
 
     private void PressStartBtn()
     {
-        title.DOFade(0, 1f).OnComplete(()=> title.gameObject.SetActive(false));
+        title.DOFade(0, 1f).OnComplete(() => title.gameObject.SetActive(false));
         EventManager<EventEnum, string>.Invoke(EventEnum.GameStart, "");
+        IngameUiInit();
     }
+
 
     private void SettingInit()
     {
@@ -83,6 +133,8 @@ public class UIHandler : Handler
 
     private void GameOverAnim(string a)
     {
+        GameManager.Instance.StopScore();
+
         Sequence sequence = DOTween.Sequence();
 
         retrybtn.interactable = false;
@@ -102,7 +154,7 @@ public class UIHandler : Handler
             {
                 retrybtn.interactable = true;
                 toTitlebtn.interactable = true;
-                score.DOText(((int)GameManager.Instance.score).ToString(), 1f,true,ScrambleMode.Numerals);
+                score.DOText(((int)GameManager.Instance.score).ToString(), 1f, true, ScrambleMode.Numerals);
             }));
     }
 
@@ -113,7 +165,7 @@ public class UIHandler : Handler
 
     private void Mute(Button mybtn)
     {
-        if(mybtn.image.sprite == volimgs[0])
+        if (mybtn.image.sprite == volimgs[0])
         {
             mybtn.image.sprite = volimgs[1];
         }

@@ -64,19 +64,16 @@ public class GameManager : MonoBehaviour
 
     public void OnAwake()
     {
-        DOTween.KillAll();
-        Time.timeScale = 1f;
-        Application.targetFrameRate = 120;
-        Screen.SetResolution(1920, 1080, true);
-        SetResolution();
-        EventManager<EventEnum, string>.AddEvent(EventEnum.GameStart, StartSetScore);
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
     public void OnSceneLoaded(Scene scene,LoadSceneMode loadSceneMode)
     {
         score = 0;
+        StopScore();
+        EventManager<EventEnum, string>.AddEvent(EventEnum.GameStart, StartSetScore);
         DOTween.KillAll();
+        StopAllCoroutines();
         Time.timeScale = 1f;
         Application.targetFrameRate = 120;
         Screen.SetResolution(1920, 1080, true);
@@ -86,14 +83,20 @@ public class GameManager : MonoBehaviour
     public void StartSetScore(string a)
     {
         StartCoroutine(Score());
+    }
 
-        IEnumerator Score()
+    public void StopScore()
+    {
+        StopCoroutine(Score());
+    }
+
+
+    IEnumerator Score()
+    {
+        while (true)
         {
-            while (true)
-            {
-                yield return null;
-                score += Time.deltaTime * 100;
-            }
+            yield return null;
+            score += Time.deltaTime * 100;
         }
     }
 

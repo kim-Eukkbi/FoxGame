@@ -25,7 +25,6 @@ public class ChunkHandler : Handler
     public override void OnStart()
     {
         List<Object> list = Resources.LoadAll("PreFabs/Chunk/").ToList();
-        print("Ω√¿€");
         foreach (var item in list)
         {
             chunkAddrs.Add(item.name);
